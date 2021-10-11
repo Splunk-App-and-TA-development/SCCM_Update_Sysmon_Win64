@@ -1,4 +1,4 @@
-# **SCCM_Update_Sysmon64_v13.02_WinClient**
+# **SCCM Update Sysmon64 v13.02 on Windows Client and Servers**
 SCCM Installation and Upgrade procedure for Sysmon 13.02 taining the symon.config file to deploy on each Windows 64Bit Client or Server 64Bit.
 
 ## **How to execute**
@@ -26,6 +26,57 @@ Inside the folder you'll find the following files to perform the Installation of
 ### Update Sysmon with predefined sysmon.xml config file
 - **update-sysmon-config_script_sccm.cmd** - Windows Batch file to Update `Sysmon64.exe` with the `SysmonConfig_windows_systems-v6.0.xml`.
 - **update-sysmon-config_script_sccm.ps1** - Windows Batch file to Update `Sysmon64.exe` with the `SysmonConfig_windows_systems-v6.0.xml`.
+
+
+## **Install and Update Process**
+
+The installation process looks like as follows:
+```bash
+:: #########################################################################################
+:: ##  Upgrade of Sysmon 64Bit version to 13.02 and Upgrade of Sysmon Configuration File  ##
+:: #########################################################################################
+:: ---> The Packages Definitions <---
+SET PkgSource=%~dp0
+
+:: ---> The changing Packages Definitions <---
+:: ---> Upload the new "sysmon-config.xml" filename in the package folder and rename the variable in the "PkgSysmonCfg" before!! <---
+SET PkgSysmonCfg=SysmonConfig_windows_systems-v6.0.xml
+
+:: ---> Uninstall old Sysmon version (32Bit or 64bit) <---
+"%PkgSource%Sysmon.exe" -u
+"%PkgSource%Sysmon64.exe" -u
+timeout 3
+:: ---> Sysmon 13.02 64Bit - Install new Sysmon version and upgrade Configuration File <---
+"%PkgSource%Sysmon64.exe" /accepteula -i %PkgSource%%PkgSysmonCfg%
+
+timeout 10
+
+:: ---> restart SplunkForwarder service after install <---
+net stop SplunkForwarder
+net start SplunkForwarder
+```
+
+The Upgrade of the Sysmon File looks as follows:
+```bash
+:: ########################################################
+:: ##  Sysmon 64Bit v.13.02 Configuration File Upgrade:  ##
+:: ########################################################
+:: ---> The Packages Definitions
+SET PkgSource=%~dp0
+
+:: ---> The changing Packages Definitions <---
+:: ---> Upload the new "sysmon-config.xml" filename in the package folder and rename the variable in the "PkgSysmonCfg" before!! <---
+SET PkgSysmonCfg=SysmonConfig_windows_systems-v6.0.xml
+
+:: ---> Sysmon 13.02 64bit - Upgrade Sysmon 13.02 Configuration File <---
+"%PkgSource%Sysmon64.exe" -c %PkgSource%%PkgSysmonCfg%
+
+timeout 10
+
+:: ---> restart SplunkForwarder service after install <---
+net stop SplunkForwarder
+net start SplunkForwarder
+```
 
 
 ## **Sysinternals Software License Terms - by Microsoft (R)**
