@@ -93,27 +93,19 @@ LIMITATION DES DOMMAGES-INTÉRÊTS ET EXCLUSION DE RESPONSABILITÉ POUR LES DOMM
 
 ### **Support**
 Please use Github to place incidents. 
-This app is supported by YN-Networks/Patrick Vanreck. Contact us under: **[yoyonet-info@gmx.net](mailto:yoyonet-info@gmx.net)**.
-
-
-#### GitLab Versionsioning Control
-Please read *[Splunk Development- Using GIT to manage Splunk Versionsioning](https://collab.srgssr.ch/teams/1149/Wiki/6_Security_Operations_Management/SPLA_Splunk%20Development%20-%20Using%20GIT%20to%20manage%20Splunk.aspx)*  to understand how to work with our dedicated **Splunk Git repository Versionsioning system** and how create new projects.     
-All other GIT and GITLAB related manpages can be found online or here in the [Gitlab Handbook](https://about.gitlab.com/handbook/) or in the [Gitlab Blog](https://gitlab.com/explore).
+This app is supported by SwissTXT/Patrick Vanreck. Contact us under: **[yoyonet-info@gmx.net](mailto:yoyonet-info@gmx.net)**.
 
 
 #### Credits
 Security SwissTXT Splunk App Development
 
-- Find us im **[intranet.srgssr.ch](https://collab.srgssr.ch/teams/1686/Pages/default.aspx "SRGSSR Intranet")**
-- Send requests or questions to  _[security@swisstxt.ch](mailto:security@swisstxt.ch)_
-- Developped by **Patrick Vanreck** _(patrick.vanreck@swisstxt.ch)_, **Sascha Litscher** _(sascha.litscher@swisstxt.ch)_ and **Mikel Schreiber** _(mikel.schreiber@swisstxt.ch)_
+- Find us under **[SECLAB Splunk App & TA Development](https://github.com/Splunk-App-and-TA-development "SECLAB Splunk App & TA Development")**
+- Send requests or questions to  _[yoyonet-info@gmx.net](mailto:yoyonet-info@gmx.net)_
+- Developped by **Patrick Vanreck**
 
 
 #### Software License
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- SOFTWARE.
+See attached **LICENSE** file ...
 
 
 #### Copyrights
@@ -125,6 +117,5 @@ The above copyright notice and this permission notice shall be included in all c
 
 
 <div class="footer">
-    Copyright &copy; 2017-2020 by SwissTXT Security
-    Member of [www.srgssr.ch](https://www.srgssr.ch "SRGSSR") and [www.swisstxt.ch](https://www.swisstxt.ch "SwissTXT")  
+    Copyright &copy; 2017-2021 by SwissTXT Security
 </div>
